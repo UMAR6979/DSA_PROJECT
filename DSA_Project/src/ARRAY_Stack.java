@@ -20,71 +20,60 @@ public class ARRAY_Stack {
             return false;
         }
     }
-    public boolean isFull()
-    {
-        if(current==arr.length-1)
-        {
+
+    public boolean isFull() {
+        if (current == arr.length - 1) {
             return true;
         }
-        else{
+        else {
             return false;
         }
     }
 
     public void push(int data) {
-        if(isFull())
-        {
+        if (isFull()) {
             System.out.println("Stack Overflow");
         }
-        else
-        {
-        current++;
-        arr[current]=data;
+        else {
+            current++;
+            arr[current] = data;
         }
     }
-    public int pop()
-    {
-        if(isEmpty())
-        {
+
+    public int pop() {
+        if (isEmpty()) {
             return -1;
         }
-        else
-        {
+        else {
             return arr[current--];
         }
     }
-    public void Traverse()
-    {
-        if(isEmpty())
-        {
+
+    public void Traverse() {
+        if (isEmpty()) {
             System.out.println("Stack is Empty");
         }
-        else
-        {
-        int[] temp=arr;
-        System.out.println("---------------------------------------------------");
-        for(int i=current;i>=0;i--)
-        {
-            System.out.print(temp[i]+" | ");
-        }
-        System.out.println("\n---------------------------------------------------");
+        else {
+            int[] temp = arr;
+            System.out.println("---------------------------------------------------");
+            for (int i = current; i >= 0; i--) {
+                System.out.print(temp[i] + " | ");
+            }
+            System.out.println("\n---------------------------------------------------");
         }
     }
-    
-    public int size()
-    {
-        return current+1;
+
+    public int size() {
+        return current + 1;
     }
-    public int peak()
-    {
-        if(isEmpty())
-        {
+
+    public int peak() {
+        if (isEmpty()) {
             System.out.print("Stack is Empty");
             return -1;
         }
-        else
-        {
-            int temp=arr[current];
+        else {
+            int temp = arr[current];
             return temp;
         }
     }

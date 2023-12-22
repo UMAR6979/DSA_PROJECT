@@ -1,5 +1,5 @@
 
-public class Dequeue<T> {
+public class queue<T> {
 
     class Node {
 
@@ -20,7 +20,7 @@ public class Dequeue<T> {
         }
     }
 
-    public void InsertAtEnd(T data) {
+    public void Insert(T data) {
         Node n = new Node();
         n.data = data;
         if (isEmpty()) {
@@ -38,39 +38,7 @@ public class Dequeue<T> {
         }
     }
 
-    public void InsertAtStart(T data) {
-        Node n = new Node();
-        n.data = data;
-        if (isEmpty()) {
-            head = n;
-            head.Prelink = null;
-            head.Nextlink = null;
-            top = head;
-            size++;
-        }
-        else {
-            head.Prelink = n;
-            n.Nextlink = head;
-            head = n;
-            head.Prelink = null;
-            size++;
-        }
-    }
-
-    public T RemoveAtEnd() {
-        if (isEmpty()) {
-            return null;
-        }
-        else {
-            T temp = top.data;
-            top = top.Prelink;
-            top.Nextlink = null;
-            size--;
-            return temp;
-        }
-    }
-
-    public T RemoveAtStart() {
+    public T Remove() {
         if (isEmpty()) {
             return null;
         }
