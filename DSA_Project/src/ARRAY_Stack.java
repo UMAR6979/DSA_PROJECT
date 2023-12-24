@@ -13,21 +13,11 @@ public class ARRAY_Stack {
     int current = -1;
 
     public boolean isEmpty() {
-        if (current < 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return current < 0;
     }
 
     public boolean isFull() {
-        if (current == arr.length - 1) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return current == arr.length - 1;
     }
 
     public void push(int data) {

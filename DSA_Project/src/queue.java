@@ -1,7 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
+/**
+ *
+ * @author ameer
+ */
 public class queue<T> {
 
-    class Node {
+    private class Node {
 
         T data;
         Node Prelink;
@@ -12,15 +20,10 @@ public class queue<T> {
     private int size = 0;
 
     public boolean isEmpty() {
-        if (head == null) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return head == null;
     }
 
-    public void Insert(T data) {
+    public void enqueue(T data) {
         Node n = new Node();
         n.data = data;
         if (isEmpty()) {
@@ -38,9 +41,16 @@ public class queue<T> {
         }
     }
 
-    public T Remove() {
+    public T dequeue() {
         if (isEmpty()) {
             return null;
+        }
+        else if(head==top)
+        {
+            T temp=head.data;
+            head=null;
+            top=null;
+            return temp;
         }
         else {
             T temp = head.data;
@@ -57,12 +67,19 @@ public class queue<T> {
     }
 
     public void Traverse() {
+        if(isEmpty())
+        {
+            System.out.println("Queue is Empty");
+        }
+        else
+        {
         Node temp = top;
-        System.out.println("-------------------------------------------------");
+         System.out.print("null");
         while (temp != null) {
-            System.out.print(temp.data + " | ");
+            System.out.print("<--"+temp.data);
             temp = temp.Prelink;
         }
-        System.out.println("\n-------------------------------------------------");
+        }
+        System.out.println(" ");
     }
 }

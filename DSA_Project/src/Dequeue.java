@@ -1,4 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
+/**
+ *
+ * @author ameer
+ */
 public class Dequeue<T> {
 
     class Node {
@@ -12,12 +20,7 @@ public class Dequeue<T> {
     private int size = 0;
 
     public boolean isEmpty() {
-        if (head == null) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return head == null;
     }
 
     public void InsertAtEnd(T data) {
@@ -89,12 +92,18 @@ public class Dequeue<T> {
     }
 
     public void Traverse() {
+        if(isEmpty())
+        {
+            System.out.println("Queue is Empty");
+        }
+        else
+        {
+            System.out.print("null");
         Node temp = top;
-        System.out.println("-------------------------------------------------");
         while (temp != null) {
-            System.out.print(temp.data + " | ");
+            System.out.print("<--"+temp.data);
             temp = temp.Prelink;
         }
-        System.out.println("\n-------------------------------------------------");
+        }
     }
 }

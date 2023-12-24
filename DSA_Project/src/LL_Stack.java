@@ -1,4 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
+/**
+ *
+ * @author ameer
+ */
 public class LL_Stack<T> {
 
     class Node {
@@ -10,12 +18,7 @@ public class LL_Stack<T> {
     private int size = 0;
 
     public boolean isEmpty() {
-        if (top == null) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return top == null;
     }
 
     public void push(T data) {

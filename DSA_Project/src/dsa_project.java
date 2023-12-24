@@ -31,6 +31,11 @@ public class dsa_project {
 //        System.out.println(l.size());
 //        l.Traverse();
 
+//          queue<Integer> q1=new queue<>();
+//          q1.enqueue(10);
+////          q1.Traverse();
+//          q1.dequeue();
+//          q1.Traverse();
 //        CircularQueue<Integer> c=new CircularQueue<>();
 //        c.enqueue(10);
 //        c.enqueue(20);
@@ -39,8 +44,6 @@ public class dsa_project {
 //        c.enqueue(50);
 //        c.dequeue();
 //        c.Traverse();
-        
-
 //        Dequeue<Integer> d = new Dequeue<>();
 //        d.InsertAtEnd(10);
 //        d.InsertAtEnd(11);
@@ -53,7 +56,33 @@ public class dsa_project {
 //        d.RemoveAtStart();
 //        System.out.println(d.size());
 //        d.Traverse();
-
+//        ArrayDequeue arr = new ArrayDequeue();
+//        arr.enqueueAtstart(10);
+//        arr.enqueueAtstart(20);
+//        arr.enqueueAtlast(30);
+//        arr.dequeueAtLast();
+//        arr.dequeueAtstart();
+//        arr.traverse();
+//    PriorityQueue<Integer> pq=new PriorityQueue<>();
+//    pq.enqueue(10, 3);
+//    pq.enqueue(20, 2);
+//    pq.enqueue(30, 1);
+//    pq.enqueue(40, 3);
+//    pq.enqueue(250, 1);
+//        pq.dequeue();
+//       pq.dequeue();
+//        pq.dequeue();
+//         pq.dequeue();
+//          pq.dequeue();
+//         pq.Traverse();
+//        ArrayQueue a = new ArrayQueue();
+//        a.enqueue(10);
+//        a.enqueue(20);
+//        a.enqueue(30);
+//        a.enqueue(40);
+//        a.enqueue(50);
+//        a.dequeue();
+//        a.traverse();
     }
 
 }

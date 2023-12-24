@@ -1,3 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author ameer
+ */
 public class CircularQueue<T> {
     class Node{
         T data;
@@ -10,14 +19,7 @@ public class CircularQueue<T> {
     
     public boolean isEmpty()
     {
-        if(head==null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return head==null;
     }
     
     public void enqueue(T data)
@@ -53,7 +55,7 @@ public class CircularQueue<T> {
         {
             T temp=head.data;
             head=null;
-            tail=head;
+            tail=null;
             return temp;
         }
         else
@@ -61,6 +63,7 @@ public class CircularQueue<T> {
             T temp=head.data;
             head=head.NextLink;
             head.PreLink=tail;
+            tail.NextLink=head;
             size--;
             return temp;
         }
@@ -81,7 +84,7 @@ public class CircularQueue<T> {
         {
         Node Temp=tail;
         do{
-            System.out.print("-->"+Temp.data);
+            System.out.print("<--"+Temp.data);
             Temp=Temp.PreLink;
         }
         while(Temp!=null  && Temp.NextLink!=head);
