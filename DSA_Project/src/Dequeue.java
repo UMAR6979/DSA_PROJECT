@@ -64,6 +64,13 @@ public class Dequeue<T> {
         if (isEmpty()) {
             return null;
         }
+        else if(head==top)
+        {
+            T temp=head.data;
+            head=null;
+            top=null;
+            return temp;
+        }
         else {
             T temp = top.data;
             top = top.Prelink;
@@ -76,6 +83,13 @@ public class Dequeue<T> {
     public T RemoveAtStart() {
         if (isEmpty()) {
             return null;
+        }
+        else if(head==top)
+        {
+            T temp=head.data;
+            head=null;
+            top=null;
+            return temp;
         }
         else {
             T temp = head.data;
@@ -105,5 +119,11 @@ public class Dequeue<T> {
             temp = temp.Prelink;
         }
         }
+    }
+    
+    public T peak()
+    {
+        T temp=top.data;
+        return temp;
     }
 }
